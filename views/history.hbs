@@ -1,0 +1,25 @@
+{{#if user}}
+  <h1>Welcome, {{user.full_name}}</h1>
+{{/if}}
+
+<h2>Sleep Records History</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Sleep Time</th>
+      <th>Wake Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each sleepRecords}}
+      <tr>
+        <td>{{dateFormat this.date}}</td>
+        <td>{{this.sleepTime}}</td>
+        <td>{{this.wakeTime}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+``
